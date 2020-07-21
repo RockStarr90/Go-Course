@@ -4,7 +4,7 @@ import "fmt"
 
 var (
 	number int
-	fibo   [100]uint
+	fibo   [100]int64
 )
 
 func main() {
