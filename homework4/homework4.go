@@ -43,26 +43,26 @@ func (c *cup) surfaceArea() float64 {
 	return c.radius*c.radius*math.Pi + 2*math.Pi*c.radius*c.height
 }
 
-func weightOfShape(s shape) float64 {
+func weightForShape(s shape) float64 {
 	return s.weight()
 }
 
 func main() {
 	korobka := &cardBoardBox{
 		title:               "Картонная коробка",
-		length:              0.305,
-		height:              0.973,
-		depth:               0.873,
-		thickness:           0.05,
-		materialDensityKgM2: 0.274,
+		length:              0.5,
+		height:              0.485,
+		depth:               0.395,
+		thickness:           0.06,
+		materialDensityKgM2: 0.592,
 	}
 	teaCup := &cup{
 		title:               "Чайная кружка",
 		radius:              0.03,
 		height:              0.085,
-		thickness:           0.03,
-		materialDensityKgM2: 1530,
+		thickness:           0.027,
+		materialDensityKgM2: 1430,
 	}
-	fmt.Printf("%v, вес составляет: %.3f\n", korobka.title, weightOfShape(korobka))
-	fmt.Printf("%v, вес составляет: %.3f\n", teaCup.title, weightOfShape(teaCup))
+	fmt.Printf("%v, вес составляет: %.3f\n", korobka.title, weightForShape(korobka))
+	fmt.Printf("%v, вес составляет: %.3f\n", teaCup.title, weightForShape(teaCup))
 }
